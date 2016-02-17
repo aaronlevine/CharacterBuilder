@@ -1,0 +1,14 @@
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\CharacterBuilderAPI.dll.config
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\CharacterBuilderAPI.dll
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\CharacterBuilderAPI.pdb
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\Newtonsoft.Json.dll
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\System.Net.Http.Formatting.dll
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\System.Web.Http.dll
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\System.Web.Http.WebHost.dll
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\Newtonsoft.Json.xml
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\System.Net.Http.Formatting.xml
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\System.Web.Http.xml
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\bin\System.Web.Http.WebHost.xml
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\obj\Debug\CharacterBuilderAPI.csprojResolveAssemblyReference.cache
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\obj\Debug\CharacterBuilderAPI.dll
+C:\Dev\D20CB\CharacterBuilder\CharacterBuilderAPI\obj\Debug\CharacterBuilderAPI.pdb
