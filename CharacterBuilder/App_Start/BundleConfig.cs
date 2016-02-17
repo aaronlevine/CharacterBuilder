@@ -15,15 +15,8 @@ namespace CharacterBuilder
 
 				,"~/app/app.js"
 				,"~/app/routes.js"
-				,"~/app/services.js"
-				//,"~/app/common.js"
-				
-				,"~/app/routes.js"
 				,"~/app/controllers/*.js"
-				//, "~/app/filters/*.js"
-				//"~/app/directives/*.js"
-				//"~/app/services.js"
-				
+				,"~/app/services/*.js"
 				));
 
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(

@@ -10,6 +10,8 @@
 
 	function RaceService($http, $q) {
 		var svc = {};
+
+
 		// I transform the successful response, unwrapping the application data
 		// from the API response payload.
 		function handleSuccess(response) {
@@ -35,7 +37,7 @@
 		}
 		
 		//api/race/options
-		svc.getRaceOptions = function () {
+		svc.getRaceOptions = function() {
 			//var request = $http({
 			//method: 'get',
 			//url: '/api/races/'
@@ -44,10 +46,10 @@
 			//TODO: move to races service
 			var raceOptions = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Tiefling'];
 			return raceOptions;
-		}
+		};
 		
 		//api/race/{id}
-		svc.getRace = function (string id) {
+		svc.getRace = function (id) {
 			//var request = $http({
 			//method: 'get',
 			//url: '/api/races/{id}'
@@ -66,5 +68,7 @@
 			}
 			return race;
 		};
+
+		return svc;
 	}
 })();

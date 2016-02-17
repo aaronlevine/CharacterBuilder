@@ -6,11 +6,14 @@
 		.module('CharacterBuilder.Controllers')
 		.controller('HomeController', HomeController);
 
-	
-	HomeController.$inject = ['racesService', $scope'];
 
-	function HomeController(racesService, $scope) {
+	HomeController.$inject = ['$scope','RaceService','ClassService','LevelService','AbilityScoreService'];
+
+	function HomeController($scope, raceService, classService, levelService, abilityScoreService) {
+		
 		var vm = this;
+
+		initialize();
 
 		vm.character = {};
 
@@ -27,12 +30,22 @@
 		vm.character.race = {};
 
 		//attributes
-		vm.character.attributes = {};	
-		vm.character.abilityScores.strength = {Name:18, modifier: 4};
-		vm.character.abilityScore.dexterity = {id:18, modifier: 4};
-		vm.character.abilityScore.constitution = {id:18, modifier: 4};
-		vm.character.abilityScore.intelligence = {id:18, modifier: 4};
-		vm.character.abilityScore.wisdom = {id:18, modifier: 4};
-		vm.character.abilityScore.charisma = {id:18, modifier: 4};
+		vm.character.abilityScores = {};
+		vm.character.abilityScores.strength = 18;
+		vm.character.abilityScores.dexterity = 18;
+		vm.character.abilityScores.constitution = 18;
+		vm.character.abilityScores.intelligence = 18;
+		vm.character.abilityScores.wisdom = 18;
+		vm.character.abilityScores.charisma = 18;
+		
+		function initialize() {
+			//drop down data
+			vm.raceOptions = raceService.getRaceOptions();
+			vm.classOptions = classService.getClassOptions();
+			
+			//ability scores and modifiers
+			vm.abilityScores = abilityScoreService.getAbilityScores();
+		}
+
 	}
 })();

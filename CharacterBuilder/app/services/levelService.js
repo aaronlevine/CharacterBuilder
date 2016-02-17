@@ -53,5 +53,7 @@
 		
 			return levels;
 		};
+
+		return svc;
 	}
 })();

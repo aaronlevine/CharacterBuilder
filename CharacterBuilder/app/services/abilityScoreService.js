@@ -77,5 +77,7 @@
 			];
 			return abilityScores;
 		};
+
+		return svc;
 	}
 })();

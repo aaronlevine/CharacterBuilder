@@ -34,11 +34,11 @@
 			return ($q.reject(message));
 		}
 		
-		var classOptions = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
+		
 		
 		
 			//api/race/options
-		svc.getRaceOptions = function () {
+		svc.getClassOptions = function () {
 			//var request = $http({
 			//method: 'get',
 			//url: '/api/class/'
@@ -46,12 +46,12 @@
 			//return (request.then(handleSuccess, handleError));
 			
 			//TODO: move to class REST service
-			var raceOptions = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Tiefling'];
-			return raceOptions;
+			var classOptions = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
+			return classOptions;
 		}
 		
 		//api/race/{id}
-		svc.getClass = function (string id) {
+		svc.getClass = function (id) {
 			//var request = $http({
 			//method: 'get',
 			//url: '/api/class/{id}'
@@ -63,6 +63,7 @@
 			return classDetails;
 		};
 		
-		
+		return svc;
 	}
+
 })();
