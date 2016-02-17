@@ -1,28 +1,80 @@
-<div class="row">
-	<H1>Character Info</H1>
-</div>
-<div class="row">
-	<div class="col-md-4">Character Name:<input type="text" data-ng-model="vm.character.characterName" /></div>
-	<div class="col-md-4">Player Name:<input type="text" data-ng-model="vm.character.playerName" /></div>
-	<div class="col-md-4">Diety:<input type="text" data-ng-model="vm.character.diety" /></div>
-</div>
-<div class="row">
-	<div class="col-sm-4">Age:<input type="text" data-ng-model="vm.character.age" /></div>
-	<div class="col-sm-4">Height:<input type="text" data-ng-model="vm.character.height" /></div>
-	<div class="col-sm-4">Weight:<input type="text" data-ng-model="vm.character.weight" /></div>
-</div>
+<div class="container">
 
-<div class="row">
-	<h1>Attributes</h1>
-</div>
-<div class="row">
-	<div class="col-sm-4">Strength:<input type="text" data-ng-model="vm.character.abilityScores.strength" /></div>
-	<div class="col-sm-4">Dexterity:<input type="text" data-ng-model="vm.character.abilityScores.dexterity" /></div>
-	<div class="col-sm-4">Constitution:<input type="text" data-ng-model="vm.character.abilityScores.constitution" /></div>
-</div>
-<div class="row">
-	<div class="col-sm-4">Intelligence:<input type="text" data-ng-model="vm.character.abilityScores.intelligence" /></div>
-	<div class="col-sm-4">Wisdom:<input type="text" data-ng-model="vm.character.abilityScores.wisdom" /></div>
-	<div class="col-sm-4">Charisma:<input type="text" data-ng-model="vm.character.abilityScores.charisma" /></div>
-</div>
+	<div class="row">
+		<div class="col-md-12"><h1>Character Info</h1></div>
+	</div>
 
+	<div class="row">
+		<div class="col-md-4">
+			Character Name:<input type="text" data-ng-model="vm.character.characterName" />
+		</div>
+		<div class="col-md-4">
+			Player Name:<input type="text" data-ng-model="vm.character.playerName" />
+		</div>
+		<div class="col-md-4">
+			Diety:<input type="text" data-ng-model="vm.character.diety" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			Age:<input type="text" data-ng-model="vm.character.age"/>
+		</div>
+		<div class="col-sm-4">
+			Height:<input type="text" data-ng-model="vm.character.height"/>
+		</div>
+		<div class="col-sm-4">
+			Weight:<input type="text" data-ng-model="vm.character.weight"/>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12"><h1>Additional Info</h1></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			Class:<select data-ng-options="class for class in vm.classOptions" data-ng-model="vm.character.class"></select>
+		</div>
+
+		<div class="col-sm-6">
+			Race:<select data-ng-options="race.name for race in vm.raceOptions" data-ng-model="vm.character.race" data-ng-change="vm.raceChanged()"></select>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Attributes</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4">
+			Strength:<input type="text"
+			                data-ng-model="vm.character.abilityScores.strength.score"
+			                data-ng-change="vm.abilityScoreChanged()"/>
+			{{vm.character.abilityScores.strength.racialIncrease}} //
+			{{vm.character.abilityScores.strength.modifier}}
+		</div>
+		<div class="col-sm-4">
+			Dexterity:<input type="text" data-ng-model="vm.character.abilityScores.dexterity.score" data-ng-change="vm.abilityScoreChanged()" />{{vm.character.abilityScores.dexterity.modifier}}
+		</div>
+		<div class="col-sm-4">
+			Constitution:<input type="text"
+			                    data-ng-model="vm.character.abilityScores.constitution.score"
+			                    data-ng-change="vm.abilityScoreChanged()"/>
+			{{vm.character.abilityScores.constitution.racialIncrease}} //
+			{{vm.character.abilityScores.constitution.modifier}}
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			Intelligence:<input type="text" data-ng-model="vm.character.abilityScores.intelligence.score" data-ng-change="vm.abilityScoreChanged()" />{{vm.character.abilityScores.intelligence.modifier}}
+		</div>
+		<div class="col-sm-4">
+			Wisdom:<input type="text" data-ng-model="vm.character.abilityScores.wisdom.score" data-ng-change="vm.abilityScoreChanged()" />{{vm.character.abilityScores.wisdom.modifier}}
+		</div>
+		<div class="col-sm-4">
+			Charisma:<input type="text" data-ng-model="vm.character.abilityScores.charisma.score" data-ng-change="vm.abilityScoreChanged()" />{{vm.character.abilityScores.charisma.modifier}}
+		</div>
+	</div>
+</div>

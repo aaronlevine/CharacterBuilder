@@ -44,7 +44,17 @@
 			//});
 			//return (request.then(handleSuccess, handleError));
 			//TODO: move to races service
-			var raceOptions = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Tiefling'];
+			//var raceOptions = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Tiefling'];
+
+			var raceOptions = {
+				'dwarf':
+				{
+					name: 'Dwarf',
+					racialIncreases: {
+						'constitution': 2
+					}
+				}
+			};
 			return raceOptions;
 		};
 		
@@ -57,14 +67,10 @@
 			//return (request.then(handleSuccess, handleError));
 			//TODO: move to races service
 			var race = {
-				Name: 'Dwarf',
-				Subrace: 'Hill Dwarf',
-				abilityScore: [
-					{
-						Stat: 'Wisdom',
-						modifier: 1
-					}
-				]
+				name: 'Dwarf',
+				racialIncreases: {
+					'constitution': 2
+				}
 			}
 			return race;
 		};
